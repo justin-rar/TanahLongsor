@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Informasi Tanah Longsor Indonesia</title>
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -131,7 +133,18 @@
                             <span class="cause-number">3</span>
                             <strong>Jenis Tanah</strong> - Tanah lempung tebal > 2.5m
                         </div>
-                        <!-- Tambahkan faktor lainnya -->
+                        <div class="cause-item">
+                            <span class="cause-number">4</span>
+                            <strong>Batuan Kurang Kuat</strong> - Batuan sedimen vulkanik
+                        </div>
+                        <div class="cause-item">
+                            <span class="cause-number">5</span>
+                            <strong>Tata Lahan</strong> - Sawah, ladang, genangan air
+                        </div>
+                        <div class="cause-item">
+                            <span class="cause-number">6</span>
+                            <strong>Getaran</strong> - Gempa, ledakan, kendaraan
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,68 +152,68 @@
     </section>
 
     <!-- Peta Rawan Section -->
-<section id="peta" class="section bg-light">
-    <div class="container">
-        <h2>Peta Zona Rawan Longsor Indonesia</h2>
-        
-        <!-- Map Controls -->
-        <div class="map-controls">
-            <div class="control-group">
-                <label>Layer Peta:</label>
-                <select id="baseLayerSelect">
-                    <option value="satellite">Satelit</option>
-                    <option value="street">Jalan</option>
-                    <option value="topographic">Topografi</option>
-                </select>
-            </div>
-            <div class="control-group">
-                <label>Layer Data:</label>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" id="showVulnerability" checked> Zona Kerentanan</label>
-                    <label><input type="checkbox" id="showHotspots"> Titik Rawan</label>
-                    <label><input type="checkbox" id="showHistory"> Sejarah Kejadian</label>
+    <section id="peta" class="section bg-light">
+        <div class="container">
+            <h2>Peta Zona Rawan Longsor Indonesia</h2>
+            
+            <!-- Map Controls -->
+            <div class="map-controls">
+                <div class="control-group">
+                    <label>Layer Peta:</label>
+                    <select id="baseLayerSelect">
+                        <option value="satellite">Satelit</option>
+                        <option value="street">Jalan</option>
+                        <option value="topographic">Topografi</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Layer Data:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="showVulnerability" checked> Zona Kerentanan</label>
+                        <label><input type="checkbox" id="showHotspots"> Titik Rawan</label>
+                        <label><input type="checkbox" id="showHistory"> Sejarah Kejadian</label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <button id="locateBtn" class="control-btn">
+                        <i class="fas fa-location-arrow"></i> Lokasi Saya
+                    </button>
+                    <button id="fullscreenBtn" class="control-btn">
+                        <i class="fas fa-expand"></i> Layar Penuh
+                    </button>
                 </div>
             </div>
-            <div class="control-group">
-                <button id="locateBtn" class="control-btn">
-                    <i class="fas fa-location-arrow"></i> Lokasi Saya
-                </button>
-                <button id="fullscreenBtn" class="control-btn">
-                    <i class="fas fa-expand"></i> Layar Penuh
-                </button>
-            </div>
-        </div>
 
-        <!-- Map Container -->
-        <div class="map-container">
-            <div id="map"></div>
-            <div class="map-legend">
-                <h4>Legenda</h4>
-                <div class="legend-item">
-                    <span class="legend-color high-risk"></span>
-                    <span>Rawan Tinggi</span>
-                </div>
-                <div class="legend-item">
-                    <span class="legend-color medium-risk"></span>
-                    <span>Rawan Sedang</span>
-                </div>
-                <div class="legend-item">
-                    <span class="legend-color low-risk"></span>
-                    <span>Rawan Rendah</span>
+            <!-- Map Container -->
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="map-legend">
+                    <h4>Legenda</h4>
+                    <div class="legend-item">
+                        <span class="legend-color high-risk"></span>
+                        <span>Rawan Tinggi</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color medium-risk"></span>
+                        <span>Rawan Sedang</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color low-risk"></span>
+                        <span>Rawan Rendah</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Map Info Panel -->
-        <div class="map-info-panel">
-            <div id="mapInfo">
-                <p>Klik pada peta untuk melihat informasi detail</p>
+            <!-- Map Info Panel -->
+            <div class="map-info-panel">
+                <div id="mapInfo">
+                    <p>Klik pada peta untuk melihat informasi detail</p>
+                </div>
             </div>
-        </div>
-        
-        <!-- Province Table (tetap seperti sebelumnya) -->
-        <div class="province-table">
-            <h3>Data Kerawanan per Provinsi</h3>
+            
+            <!-- Province Table -->
+            <div class="province-table">
+                <h3>Data Kerawanan per Provinsi</h3>
                 <table>
                     <thead>
                         <tr>
@@ -228,6 +241,18 @@
                             <td>100 lokasi</td>
                             <td>5 kejadian</td>
                             <td>63 jiwa</td>
+                        </tr>
+                        <tr>
+                            <td>Sumatera Utara</td>
+                            <td>53 lokasi</td>
+                            <td>3 kejadian</td>
+                            <td>126 jiwa</td>
+                        </tr>
+                        <tr>
+                            <td>Yogyakarta</td>
+                            <td>30 lokasi</td>
+                            <td>-</td>
+                            <td>-</td>
                         </tr>
                     </tbody>
                 </table>
@@ -383,6 +408,13 @@
                             <p>Badan Penanggulangan Bencana Daerah</p>
                         </div>
                     </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>BNPB</strong>
+                            <p>Badan Nasional Penanggulangan Bencana</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="contact-form">
@@ -391,7 +423,7 @@
                         <input type="text" placeholder="Nama" required>
                         <input type="email" placeholder="Email" required>
                         <input type="text" placeholder="Lokasi" required>
-                        <textarea placeholder="Deskripsi kejadian..." required></textarea>
+                        <textarea placeholder="Deskripsi kejadian..." rows="4" required></textarea>
                         <button type="submit">Kirim Laporan</button>
                     </form>
                 </div>
@@ -427,8 +459,9 @@
         </div>
     </footer>
 
-    <script src="assets/js/script.js"></script>
     <!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

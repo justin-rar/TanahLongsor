@@ -95,12 +95,11 @@
                         <div class="row align-items-center">
                             <div class="col-md-8">
                                 <h4 class="card-title fw-semibold text-primary">Pedoman Mitigasi Bencana Tanah Longsor</h4>
-                                <p class="card-text">Pedoman lengkap tentang mitigasi bencana tanah longsor yang disusun oleh BNPB. Berisi langkah-langkah pencegahan, kesiapsiagaan, dan penanggulangan.</p>
-                                <p class="text-muted mb-0"><small>Format: PDF | Ukuran: 2.5 MB</small></p>
+                                <p class="card-text">Pedoman lengkap tentang mitigasi bencana tanah longsor yang disusun oleh BPBD. Berisi langkah-langkah pencegahan, kesiapsiagaan, dan penanggulangan.</p>
                             </div>
                             <div class="col-md-4 text-end">
                                 <button class="btn download-btn text-white px-4 py-2">
-                                    <i class="fas fa-download me-2"></i>Download
+                                    <i class="fas fa-download me-2"></i><a href="https://bpbd.jogjaprov.go.id/berita/mitigasi-bencana-tanah-longsor-1" style="color: inherit; text-decoration: none;" target="_blank">Kunjungi</a>
                                 </button>
                             </div>
                         </div>
@@ -115,12 +114,11 @@
                         <div class="row align-items-center">
                             <div class="col-md-8">
                                 <h4 class="card-title fw-semibold text-primary">Peta Zona Rawan Longsor Nasional</h4>
-                                <p class="card-text">Peta digital zona rawan tanah longsor seluruh Indonesia dalam format shapefile dan geojson. Dilengkapi dengan data atribut tingkat kerawanan.</p>
-                                <p class="text-muted mb-0"><small>Format: ZIP (Shapefile, GeoJSON) | Ukuran: 15.8 MB</small></p>
+                                <p class="card-text">Peta digital zona rawan tanah longsor seluruh Indonesia. Tidak hanya tanah longsor, tetapi bahaya bencana alam lainnya.</p>
                             </div>
                             <div class="col-md-4 text-end">
                                 <button class="btn download-btn text-white px-4 py-2">
-                                    <i class="fas fa-download me-2"></i>Download
+                                    <i class="fas fa-download me-2"></i><a href="https://inarisk.bnpb.go.id" style="color: inherit; text-decoration: none;" target="_blank">Kunjungi</a>
                                 </button>
                             </div>
                         </div>
@@ -136,58 +134,16 @@
                             <div class="col-md-8">
                                 <h4 class="card-title fw-semibold text-primary">Modul Edukasi Masyarakat</h4>
                                 <p class="card-text">Modul pembelajaran untuk edukasi masyarakat tentang bahaya tanah longsor dan cara penanggulangannya. Cocok untuk pelatihan dan sosialisasi.</p>
-                                <p class="text-muted mb-0"><small>Format: PDF | Ukuran: 3.2 MB</small></p>
                             </div>
                             <div class="col-md-4 text-end">
                                 <button class="btn download-btn text-white px-4 py-2">
-                                    <i class="fas fa-download me-2"></i>Download
+                                    <i class="fas fa-download me-2"></i><a href="https://www.esdm.go.id/assets/media/content/Pengenalan_Gerakan_Tanah.pdf" style="color: inherit; text-decoration: none;" target="_blank">Download</a>
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Sumber Daya 4 -->
-            <div class="col-12">
-                <div class="card resource-card">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col-md-8">
-                                <h4 class="card-title fw-semibold text-primary">Teknik Stabilisasi Lereng</h4>
-                                <p class="card-text">Panduan teknis tentang metode stabilisasi lereng rawan longsor menggunakan teknik vegetatif dan struktural.</p>
-                                <p class="text-muted mb-0"><small>Format: PDF | Ukuran: 4.1 MB</small></p>
-                            </div>
-                            <div class="col-md-4 text-end">
-                                <button class="btn download-btn text-white px-4 py-2">
-                                    <i class="fas fa-download me-2"></i>Download
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sumber Daya 5 -->
-            <div class="col-12">
-                <div class="card resource-card">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col-md-8">
-                                <h4 class="card-title fw-semibold text-primary">SOP Tanggap Darurat Longsor</h4>
-                                <p class="card-text">Standar Operasional Prosedur (SOP) untuk tanggap darurat bencana tanah longsor.</p>
-                                <p class="text-muted mb-0"><small>Format: PDF | Ukuran: 1.8 MB</small></p>
-                            </div>
-                            <div class="col-md-4 text-end">
-                                <button class="btn download-btn text-white px-4 py-2">
-                                    <i class="fas fa-download me-2"></i>Download
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Additional Resources -->
         <h2 class="section-title mt-5">Tautan Penting</h2>

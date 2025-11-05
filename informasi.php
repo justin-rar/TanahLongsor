@@ -187,37 +187,56 @@
                             <button type="button" data-bs-target="#jenisCarousel" data-bs-slide-to="1"></button>
                             <button type="button" data-bs-target="#jenisCarousel" data-bs-slide-to="2"></button>
                             <button type="button" data-bs-target="#jenisCarousel" data-bs-slide-to="3"></button>
+                            <button type="button" data-bs-target="#jenisCarousel" data-bs-slide-to="4"></button>
+                            <button type="button" data-bs-target="#jenisCarousel" data-bs-slide-to="5"></button>
+                            <button type="button" data-bs-target="#jenisCarousel" data-bs-slide-to="6"></button>
                         </div>
-                        <div class="carousel-inner">
+                        <div class="carousel-inner"> <!-- 1 TRANSLASI -->
                             <div class="carousel-item active">
-                                <img src="https://images.unsplash.com/photo-1591474200742-8e512e6f98f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                <img src="assets/images/longsorantranslasi.png" 
                                      class="d-block w-100 carousel-img" alt="Longsoran Translasi">
                                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
                                     <h5 class="fw-semibold">Longsoran Translasi</h5>
                                     <p>Longsoran yang bergerak sepanjang bidang gelincir berbentuk rata atau menggelombang landai</p>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1612489846772-55a5e89766f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                            <div class="carousel-item"> <!-- 2 ROTASI -->
+                                <img src="assets/images/longsoranrotasi.png" 
                                      class="d-block w-100 carousel-img" alt="Longsoran Rotasi">
                                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
                                     <h5 class="fw-semibold">Longsoran Rotasi</h5>
                                     <p>Longsoran yang bergerak sepanjang bidang gelincir berbentuk cekung</p>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                            <div class="carousel-item"> <!-- 3 PEGERAKAN BLOK -->
+                                <img src="assets/images/pergerakanblok.png" 
                                      class="d-block w-100 carousel-img" alt="Pergerakan Blok">
                                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
                                     <h5 class="fw-semibold">Pergerakan Blok</h5>
                                     <p>Pergerakan batuan yang bergerak pada bidang gelincir berbentuk rata</p>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1501595091296-3aa970afb3ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                            <div class="carousel-item"> <!-- 4 RAYAPAN TANAH -->
+                                <img src="assets/images/rayapantanah.png" 
                                      class="d-block w-100 carousel-img" alt="Rayapan Tanah">
                                 <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
                                     <h5 class="fw-semibold">Rayapan Tanah</h5>
+                                    <p>Pergerakan tanah yang sangat lambat pada lereng landai</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item"> <!-- 5 RUNTUHAN BATU -->
+                                <img src="assets/images/runtuhanbatu.png" 
+                                     class="d-block w-100 carousel-img" alt="Runtuhan Batu">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                                    <h5 class="fw-semibold">Runtuhan Batu</h5>
+                                    <p>Pergerakan tanah yang sangat lambat pada lereng landai</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item"> <!-- 6 ALIRAN BAHAN ROMBAKAN -->
+                                <img src="assets/images/aliranbahanrombakan.png" 
+                                     class="d-block w-100 carousel-img" alt="Aliran Bahan Rombakan">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                                    <h5 class="fw-semibold">Aliran Bahan Rombakan</h5>
                                     <p>Pergerakan tanah yang sangat lambat pada lereng landai</p>
                                 </div>
                             </div>

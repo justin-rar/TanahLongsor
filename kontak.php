@@ -189,24 +189,6 @@
                                 <textarea class="form-control" id="deskripsi" rows="4" placeholder="Jelaskan detail kejadian tanah longsor yang terjadi" required></textarea>
                             </div>
                             
-                            <div class="mb-3">
-                                <label for="dampak" class="form-label fw-medium">Dampak yang Terjadi</label>
-                                <select class="form-select" id="dampak" required>
-                                    <option value="" selected disabled>Pilih dampak yang terjadi</option>
-                                    <option value="korban-jiwa">Korban Jiwa</option>
-                                    <option value="kerusakan-rumah">Kerusakan Rumah</option>
-                                    <option value="kerusakan-infrastruktur">Kerusakan Infrastruktur</option>
-                                    <option value="mengungsi">Warga Mengungsi</option>
-                                    <option value="lainnya">Lainnya</option>
-                                </select>
-                            </div>
-                            
-                            <div class="mb-3">
-                                <label for="foto" class="form-label fw-medium">Upload Foto (opsional)</label>
-                                <input type="file" class="form-control" id="foto" accept="image/*">
-                                <div class="form-text">Format: JPG, PNG (maks. 5MB)</div>
-                            </div>
-                            
                             <div class="d-grid">
                                 <button type="submit" class="btn submit-btn text-white">
                                     <i class="fas fa-paper-plane me-2"></i>Kirim Laporan

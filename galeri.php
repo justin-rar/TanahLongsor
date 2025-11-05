@@ -87,12 +87,12 @@
             <!-- Galeri 1 -->
             <div class="col-md-4">
                 <div class="card h-100">
-                    <img src="https://images.unsplash.com/photo-1591474200742-8e512e6f98f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                    <img src="https://pusatkrisis.kemkes.go.id/__asset/__images/content/19tanah-longsor-mematikan-indonesia.jpg" 
                          class="card-img-top gallery-img" alt="Tanah Longsor 1">
                     <div class="card-body">
                         <h5 class="card-title fw-semibold">Longsor di Daerah Pegunungan</h5>
                         <p class="card-text">Dokumentasi tanah longsor yang terjadi di daerah pegunungan dengan kemiringan lereng curam.</p>
-                        <div class="text-muted small">Sumber: Dokumentasi BNPB</div>
+                        <div class="text-muted small">Sumber: <a href="https://pusatkrisis.kemkes.go.id/bencana-tanah-longsor-paling-mematikan-di-indonesia" rel="noopener noreferrer" target="_blank">pusatkrisis.kemkes.go.id</a> </div>
                     </div>
                 </div>
             </div>
@@ -100,12 +100,12 @@
             <!-- Galeri 2 -->
             <div class="col-md-4">
                 <div class="card h-100">
-                    <img src="https://images.unsplash.com/photo-1612489846772-55a5e89766f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                    <img src="https://asset.kompas.com/crops/mW65PetH73lvSB3oKBqWzbRz0kM=/0x72:1280x925/1200x800/data/photo/2019/03/13/672330627.jpg" 
                          class="card-img-top gallery-img" alt="Tanah Longsor 2">
                     <div class="card-body">
                         <h5 class="card-title fw-semibold">Dampak pada Permukiman</h5>
                         <p class="card-text">Akibat tanah longsor yang merusak permukiman warga di daerah rawan bencana.</p>
-                        <div class="text-muted small">Sumber: Dokumentasi BPBD</div>
+                        <div class="text-muted small">Sumber: <a href="https://www.kompas.com/skola/read/2021/09/29/183000869/dampak-tanah-longsor-bagi-lingkungan-dan-masyarakat" target="_blank" rel="noopener noreferrer">kompas.com</a></div>
                     </div>
                 </div>
             </div>
@@ -113,12 +113,12 @@
             <!-- Galeri 3 -->
             <div class="col-md-4">
                 <div class="card h-100">
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                    <img src="https://surabaya.basarnas.go.id/storage/uploads/posts/6831ad6d7ceb9.jpg" 
                          class="card-img-top gallery-img" alt="Tanah Longsor 3">
                     <div class="card-body">
                         <h5 class="card-title fw-semibold">Proses Evakuasi</h5>
                         <p class="card-text">Tim SAR melakukan evakuasi korban terdampak tanah longsor.</p>
-                        <div class="text-muted small">Sumber: Dokumentasi Basarnas</div>
+                        <div class="text-muted small">Sumber: <a href="https://surabaya.basarnas.go.id/berita/tim-sar-gabungan-berhasil-menemukan-seluruh-korban-tanah-longsor-di-trenggalek" target="_blank" rel="noopener noreferrer">surabaya.basarnas.go.id</a></div>
                     </div>
                 </div>
             </div>
@@ -126,12 +126,12 @@
             <!-- Galeri 4 -->
             <div class="col-md-4">
                 <div class="card h-100">
-                    <img src="https://images.unsplash.com/photo-1501595091296-3aa970afb3ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                    <img src="https://img.antaranews.com/cache/1200x800/2020/11/15/IMG-20201115-WA0003.jpg.webp" 
                          class="card-img-top gallery-img" alt="Tanah Longsor 4">
                     <div class="card-body">
                         <h5 class="card-title fw-semibold">Rekayasa Teknis</h5>
                         <p class="card-text">Pemasangan bronjong untuk stabilisasi lereng rawan longsor.</p>
-                        <div class="text-muted small">Sumber: Dokumentasi PUPR</div>
+                        <div class="text-muted small">Sumber: <a href="https://www.antaranews.com/berita/1840668/mengenal-teknik-pengaman-lereng-untuk-wilayah-rawan-longsor" target="_blank" rel="noopener noreferrer">antaranews.com</a></div>
                     </div>
                 </div>
             </div>
@@ -139,12 +139,12 @@
             <!-- Galeri 5 -->
             <div class="col-md-4">
                 <div class="card h-100">
-                    <img src="https://images.unsplash.com/photo-1476820865390-c52aeebb9891?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                    <img src="https://asset.kompas.com/crops/HnbPgxCJrH0urME2kPMa648JnQ4=/3x291:1054x992/1200x800/data/photo/2022/08/03/62ea5abda1087.jpg" 
                          class="card-img-top gallery-img" alt="Tanah Longsor 5">
                     <div class="card-body">
                         <h5 class="card-title fw-semibold">Vegetasi Penahan</h5>
                         <p class="card-text">Penanaman vegetasi untuk mengurangi risiko tanah longsor.</p>
-                        <div class="text-muted small">Sumber: Dokumentasi Kementerian LHK</div>
+                        <div class="text-muted small">Sumber: <a href="https://www.kompas.com/properti/read/2022/08/04/060000121/ternyata-tanaman-ini-bisa-cegah-longsor" target="_blank" rel="noopener noreferrer">kompas.com</a></div>
                     </div>
                 </div>
             </div>
@@ -152,12 +152,12 @@
             <!-- Galeri 6 -->
             <div class="col-md-4">
                 <div class="card h-100">
-                    <img src="https://images.unsplash.com/photo-1464822759849-e2be53e9bb93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                    <img src="https://testindo.co.id/wp-content/uploads/2023/10/Banner-Thumbnail-Testindo-79-1536x1024.jpg" 
                          class="card-img-top gallery-img" alt="Tanah Longsor 6">
                     <div class="card-body">
                         <h5 class="card-title fw-semibold">Pemantauan Lereng</h5>
                         <p class="card-text">Alat pemantauan pergerakan tanah di daerah rawan longsor.</p>
-                        <div class="text-muted small">Sumber: Dokumentasi PVMBG</div>
+                        <div class="text-muted small">Sumber: <a href="https://testindo.co.id/sistem-monitoring-lereng-tambang/" target="_blank" rel="noopener noreferrer">testindo.co.id</a></div>
                     </div>
                 </div>
             </div>
@@ -170,7 +170,7 @@
                 <div class="card">
                     <div class="card-body p-0">
                         <div class="ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Edukasi Tanah Longsor" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/zoR6cQN6GhE" title="Video Edukasi Tanah Longsor" allowfullscreen></iframe>
                         </div>
                         <div class="p-3">
                             <h5 class="fw-semibold">Video Mitigasi Tanah Longsor</h5>
@@ -183,7 +183,7 @@
                 <div class="card">
                     <div class="card-body p-0">
                         <div class="ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Penanggulangan Tanah Longsor" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/q9gR4gPqwRg" title="Video Penanggulangan Tanah Longsor" allowfullscreen></iframe>
                         </div>
                         <div class="p-3">
                             <h5 class="fw-semibold">Penanggulangan Bencana</h5>

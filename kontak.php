@@ -1,3 +1,27 @@
+<?php
+include 'koneksi.php'; // memanggil koneksi database
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nama = $_POST['nama'];
+    $email = $_POST['email'];
+    $nomor_telepon = $_POST['nomor_telepon'];
+    $lokasi_kejadian = $_POST['lokasi_kejadian'];
+    $tanggal_kejadian = $_POST['tanggal_kejadian'];
+    $deskripsi_kejadian = $_POST['deskripsi_kejadian'];
+
+    $stmt = $conn->prepare("INSERT INTO laporan_longsor (nama, email, nomor_telepon, lokasi_kejadian, tanggal_kejadian, deskripsi_kejadian) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssss", $nama, $email, $nomor_telepon, $lokasi_kejadian, $tanggal_kejadian, $deskripsi_kejadian);
+
+    if ($stmt->execute()) {
+        echo "<div class='alert alert-success text-center'>Laporan berhasil dikirim!</div>";
+    } else {
+        echo "<div class='alert alert-danger text-center'>Gagal mengirim laporan: " . $stmt->error . "</div>";
+    }
+
+    $stmt->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -153,7 +177,8 @@
             </div>
 
             <!-- Form Laporan -->
-            <div class="col-md-6">
+            <form action="kontak.php" method="POST" class="col-md-6">
+            <div class=>
                 <h3 class="fw-semibold mb-4">Laporkan Kejadian</h3>
                 
                 <div class="card contact-card">
@@ -161,32 +186,32 @@
                         <form id="reportForm">
                             <div class="mb-3">
                                 <label for="nama" class="form-label fw-medium">Nama Lengkap</label>
-                                <input type="text" class="form-control" id="nama" placeholder="Masukkan nama lengkap" required>
+                                <input type="text" class="form-control" id="nama" placeholder="Masukkan nama lengkap" name="nama" required>
                             </div>
                             
                             <div class="mb-3">
                                 <label for="email" class="form-label fw-medium">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Masukkan alamat email" required>
+                                <input type="email" class="form-control" id="email" placeholder="Masukkan alamat email" name="email" required>
                             </div>
                             
                             <div class="mb-3">
                                 <label for="telepon" class="form-label fw-medium">Nomor Telepon</label>
-                                <input type="tel" class="form-control" id="telepon" placeholder="Masukkan nomor telepon">
+                                <input type="tel" class="form-control" id="telepon" placeholder="Masukkan nomor telepon" name="nomor_telepon">
                             </div>
                             
                             <div class="mb-3">
                                 <label for="lokasi" class="form-label fw-medium">Lokasi Kejadian</label>
-                                <input type="text" class="form-control" id="lokasi" placeholder="Desa/Kecamatan/Kabupaten" required>
+                                <input type="text" class="form-control" id="lokasi" placeholder="Desa/Kecamatan/Kabupaten" name="lokasi_kejadian" required>
                             </div>
                             
                             <div class="mb-3">
                                 <label for="tanggal" class="form-label fw-medium">Tanggal Kejadian</label>
-                                <input type="date" class="form-control" id="tanggal" required>
+                                <input type="date" class="form-control" id="tanggal" name="tanggal_kejadian" required>
                             </div>
                             
                             <div class="mb-3">
                                 <label for="deskripsi" class="form-label fw-medium">Deskripsi Kejadian</label>
-                                <textarea class="form-control" id="deskripsi" rows="4" placeholder="Jelaskan detail kejadian tanah longsor yang terjadi" required></textarea>
+                                <textarea class="form-control" id="deskripsi" rows="4" placeholder="Jelaskan detail kejadian tanah longsor yang terjadi" name="deskripsi_kejadian" required></textarea>
                             </div>
                             
                             <div class="d-grid">
@@ -199,6 +224,7 @@
                 </div>
             </div>
         </div>
+        </form>
 
         <!-- Emergency Contacts -->
         <div class="row mt-5">

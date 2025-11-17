@@ -37,22 +37,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-/* Palet Warna (Tema Tanah Longsor): Konsisten */
+/* Palet Warna */
 :root {
-    --primary-color: #795548; /* Cokelat Sedang/Lumpur */
-    --secondary-color: #D84315; /* Oranye Gelap/Aksen Bahaya (Base untuk gradasi) */
-    --secondary-hover-color: #F4511E; /* Oranye Lebih Terang (Akhir gradasi tombol) */
-    --dark-color: #5D4037; /* Cokelat Tua/Tanah (Base untuk gradasi background) */
+    --primary-color: #795548;
+    --secondary-color: #D84315;
+    --secondary-hover-color: #F4511E;
+    --dark-color: #5D4037;
     --light-bg-color: #F5F5F5;
 
-    /* Gradasi Background yang lebih kontras */
-    --gradient-bg-start: #4A2C21; /* Cokelat Lebih Gelap dari dark-color untuk start */
-    --gradient-bg-end: #8D6E63; /* Cokelat Lebih Terang dari primary-color untuk end */
+    --gradient-bg-start: #4A2C21;
+    --gradient-bg-end: #8D6E63; 
     --gradient-body: linear-gradient(135deg, var(--gradient-bg-start) 0%, var(--gradient-bg-end) 100%);
     
-    /* Gradasi Tombol yang lebih kontras */
-    --gradient-btn-start: #D84315; /* Oranye Gelap */
-    --gradient-btn-end: #F4511E; /* Oranye Lebih Terang */
+    --gradient-btn-start: #D84315; 
+    --gradient-btn-end: #F4511E; 
     --gradient-button: linear-gradient(135deg, var(--gradient-btn-start) 0%, var(--gradient-btn-end) 100%);
 }
 
@@ -60,8 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     font-family: 'Poppins', sans-serif;
 }
 body {
-    /* Menerapkan gradasi ke background body */
-    background: var(--gradient-body); /* Menggunakan gradasi yang lebih kontras */
+
+    background: var(--gradient-body); 
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -73,8 +71,7 @@ body {
     overflow: hidden;
 }
 .login-left {
-    /* Menerapkan gradasi ke sisi kiri */
-    background: var(--gradient-body); /* Menggunakan gradasi yang lebih kontras */
+    background: var(--gradient-body); 
     color: white;
     padding: 40px;
     display: flex;
@@ -91,7 +88,7 @@ body {
 .brand i {
     font-size: 3rem;
     margin-bottom: 15px;
-    color: var(--secondary-color); /* Tetap Oranye Gelap */
+    color: var(--secondary-color); 
 }
 .brand h1 {
     font-weight: 700;
@@ -119,8 +116,7 @@ body {
 }
 
 .btn-login {
-    /* Menerapkan gradasi ke tombol login */
-    background: var(--gradient-button); /* Menggunakan gradasi tombol yang lebih kontras */
+    background: var(--gradient-button);
     border: none;
     border-radius: 8px;
     padding: 12px;
@@ -130,8 +126,7 @@ body {
 .btn-login:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(216, 67, 21, 0.4); 
-    /* Untuk hover, bisa juga sedikit menggelapkan atau memperterang gradasi */
-    filter: brightness(1.1); /* Memberi efek sedikit lebih cerah saat hover */
+    filter: brightness(1.1);
 }
 .feature-list {
     list-style: none;
@@ -154,12 +149,11 @@ body {
     margin-right: 10px;
     color: white;
 }
-/* Memastikan ikon gunung di sisi kiri juga putih */
+
 .login-left .fa-mountain {
     color: white !important;
 }
 
-/* Penyesuaian teks kecil info */
 .text-muted.small {
     color: #9E9E9E !important;
 }

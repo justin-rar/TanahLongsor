@@ -2,7 +2,22 @@
 include 'koneksi.php'; // memanggil koneksi database
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-// ... (Bagian PHP tidak berubah) ...
+    $nama = $_POST['nama'];
+    $email = $_POST['email'];
+    $nomor_telepon = $_POST['nomor_telepon'];
+    $lokasi_kejadian = $_POST['lokasi_kejadian'];
+    $tanggal_kejadian = $_POST['tanggal_kejadian'];
+    $deskripsi_kejadian = $_POST['deskripsi_kejadian'];
+
+    $stmt = $conn->prepare("INSERT INTO laporan_longsor (nama, email, nomor_telepon, lokasi_kejadian, tanggal_kejadian, deskripsi_kejadian) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssss", $nama, $email, $nomor_telepon, $lokasi_kejadian, $tanggal_kejadian, $deskripsi_kejadian);
+
+    if ($stmt->execute()) {
+        echo "<div class='alert alert-success text-center'>Laporan berhasil dikirim!</div>";
+    } else {
+        echo "<div class='alert alert-danger text-center'>Gagal mengirim laporan: " . $stmt->error . "</div>";
+    }
+    $stmt->close();
 }
 ?>
 
@@ -20,12 +35,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Palet Warna (Tema Tanah Longsor): Konsisten */
+        /* Palet Warna */
         :root {
-            --primary-color: #795548; /* Cokelat Sedang/Lumpur (Digunakan sebagai background ikon) */
-            --secondary-color: #D84315; /* Oranye Gelap/Aksen Bahaya (Warna Aksen & Tombol Dasar) */
-            --secondary-hover-color: #F4511E; /* Oranye Lebih Terang untuk Hover Tombol */
-            --dark-color: #5D4037; /* Cokelat Tua/Tanah (Warna Teks Utama) */
+            --primary-color: #795548;
+            --secondary-color: #D84315; 
+            --secondary-hover-color: #F4511E; 
+            --dark-color: #5D4037; 
             --light-bg-color: #F5F5F5;
         }
 
@@ -34,7 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             color: var(--dark-color);
         }
         
-        /* --- Navbar Styles (Konsisten) --- */
         .navbar-brand {
             font-weight: 700;
             color: var(--dark-color) !important;
@@ -69,17 +83,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         .nav-link.active {
             color: var(--secondary-color) !important;
         }
-        /* ----------------------------------- */
 
-        /* Judul Section (Menggunakan warna aksen) */
         .section-title {
-            border-left: 5px solid var(--secondary-color); /* Aksen Oranye */
+            border-left: 5px solid var(--secondary-color);
             padding-left: 15px;
             margin: 40px 0 20px 0;
             font-weight: 600;
         }
         
-        /* Card Kontak */
         .contact-card {
             border: none;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -89,30 +100,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             transform: translateY(-5px);
         }
         
-        /* Button Submit (Gaya Konsisten) */
         .submit-btn {
-            background-color: var(--secondary-color); /* Warna Tombol: Oranye Gelap */
+            background-color: var(--secondary-color);
             border: none;
             font-weight: 500;
             padding: 12px 30px;
             transition: background-color 0.3s ease;
         }
         .submit-btn:hover {
-            background-color: var(--secondary-hover-color); /* Hover: Oranye Lebih Terang */
+            background-color: var(--secondary-hover-color); 
         }
         
-        /* Input Form Focus (Aksen Oranye) */
         .form-control:focus {
             border-color: var(--secondary-color);
-            box-shadow: 0 0 0 0.25rem rgba(216, 67, 21, 0.25); /* Shadow Oranye transparan */
+            box-shadow: 0 0 0 0.25rem rgba(216, 67, 21, 0.25);
         }
 
-        /* Penyesuaian Warna Ikon pada Instansi Terkait */
         .contact-card .text-primary {
             color: var(--dark-color) !important;
         }
         
-        /* Gaya Circle Icon yang Diperbaiki */
         .icon-circle {
             background-color: var(--primary-color) !important;
             width: 50px;
@@ -121,17 +128,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             justify-content: center;
             align-items: center;
             border-radius: 50%;
-            margin-right: 1rem; /* Tambahkan margin agar terpisah dari teks */
+            margin-right: 1rem; 
         }
-        
-        /* Alert Darurat */
         .alert-danger {
-            background-color: #FDECEA; /* Merah Muda Sangat Pucat */
-            border-color: #F5A9A9; /* Border Merah Pucat */
+            background-color: #FDECEA; 
+            border-color: #F5A9A9; 
             color: var(--dark-color);
         }
         .alert-danger .fa-exclamation-triangle {
-            color: var(--secondary-color); /* Ikon Darurat tetap menggunakan warna Oranye */
+            color: var(--secondary-color); 
         }
     </style>
 </head>

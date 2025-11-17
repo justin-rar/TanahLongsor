@@ -4,89 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informasi Tanah Longsor - WELI</title>
-    
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Custom CSS -->
     <style>
+        /* Palet Warna*/
+        :root {
+            --primary-color: #795548;
+            --secondary-color: #D84315;
+            --dark-color: #5D4037;
+            --light-bg-color: #F5F5F5;
+        }
+
         * {
             font-family: 'Poppins', sans-serif;
         }
         .navbar-brand {
             font-weight: 700;
-            color: #2c3e50 !important;
+            color: var(--dark-color) !important;
             font-size: 1.5rem;
         }
+        
         .nav-link {
             font-weight: 500;
+            color: var(--dark-color) !important;
+            position: relative;
+            padding-bottom: 5px;
+            transition: color 0.3s ease;
         }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease-in-out;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--secondary-color) !important;
+        }
+
         .section-title {
-            border-left: 5px solid #3498db;
+            border-left: 5px solid var(--secondary-color); 
             padding-left: 15px;
             margin: 40px 0 20px 0;
             font-weight: 600;
+            color: var(--dark-color);
         }
-        .carousel-img {
-            height: 400px;
-            object-fit: cover;
-            border-radius: 10px;
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card.bg-light {
+            background-color: var(--light-bg-color) !important;
+        }
+        
+        .jenis-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 100%; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .jenis-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+        }
+
+        .jenis-card-img {
+            height: 200px; 
+            object-fit: cover; 
+            width: 100%;
+        }
+        
+        .jenis-card .card-body {
+            border-top: 3px solid var(--secondary-color);
+        }
+
+        .jenis-card .card-title {
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .card-header.bg-primary {
+            background-color: var(--primary-color) !important;
+        }
+        .card-header.bg-warning {
+            background-color: var(--secondary-color) !important; 
+            color: white !important;
         }
         .cause-item {
-            background: #f8f9fa;
-            border-left: 4px solid #3498db;
+            background: #EFEBE9; 
+            border-left: 4px solid var(--primary-color);
             padding: 15px;
             margin-bottom: 10px;
             border-radius: 5px;
         }
-        .mitigation-card {
-            border: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            height: 100%;
-        }
+
         .mitigation-card:hover {
             transform: translateY(-5px);
         }
-        .timeline {
-            position: relative;
-            padding-left: 30px;
+        .mitigation-card .bg-primary { 
+            background-color: var(--success-color) !important; 
         }
+        .mitigation-card .bg-success { 
+            background-color: var(--primary-color) !important; 
+        }
+        .mitigation-card .bg-info { 
+            background-color: var(--secondary-color) !important; 
+        }
+        .mitigation-card .bg-warning { 
+            background-color: var(--dark-color) !important; 
+        }
+        .mitigation-card .bg-danger { 
+            background-color: var(--primary-color) !important;
+        }
+        
         .timeline::before {
-            content: '';
-            position: absolute;
-            left: 15px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: #3498db;
-        }
-        .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
+            background: var(--primary-color); 
         }
         .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -23px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #3498db;
-            border: 3px solid white;
-            box-shadow: 0 0 0 2px #3498db;
+            background: var(--secondary-color); 
+            box-shadow: 0 0 0 2px var(--dark-color);
         }
+
+        #penanggulangan-saat .card-title.text-primary {
+            color: var(--secondary-color) !important; 
+        }
+        
+        #penanggulangan-setelah .fa-home {
+            color: var(--primary-color) !important;
+        }
+        #penanggulangan-setelah .fa-heart {
+            color: var(--secondary-color) !important;
+        }
+        #penanggulangan-setelah .fa-chart-line {
+            color: var(--success-color) !important;
+        }
+
+        #keuntungan .fa-check-circle {
+            color: var(--success-color) !important;
+        }
+        #kerugian .fa-times-circle {
+            color: var(--secondary-color) !important;
+        }
+
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="index.php">WELI</a>
@@ -99,7 +178,7 @@
                         <a class="nav-link" href="index.php">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="informasi.php">Informasi</a>
+                        <a class="nav-link active" aria-current="page" href="informasi.php">Informasi</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="peta-rawan.php">Peta Rawan</a>
@@ -119,7 +198,7 @@
     </nav>
 
     <div class="container mt-5 pt-5">
-        <!-- Definisi -->
+        
         <section id="definisi" class="mb-5">
             <h2 class="section-title">Definisi Tanah Longsor</h2>
             <div class="card border-0 shadow-sm">
@@ -137,79 +216,73 @@
             </div>
         </section>
 
-        <!-- Jenis-Jenis -->
         <section id="jenis" class="mb-5">
             <h2 class="section-title">Jenis-Jenis Tanah Longsor</h2>
-            <div id="jenisCarousel" class="carousel slide shadow rounded" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#jenisCarousel" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#jenisCarousel" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#jenisCarousel" data-bs-slide-to="2"></button>
-                    <button type="button" data-bs-target="#jenisCarousel" data-bs-slide-to="3"></button>
-                    <button type="button" data-bs-target="#jenisCarousel" data-bs-slide-to="4"></button>
-                    <button type="button" data-bs-target="#jenisCarousel" data-bs-slide-to="5"></button>
-                    <button type="button" data-bs-target="#jenisCarousel" data-bs-slide-to="6"></button>
-                </div>
-                <div class="carousel-inner"> <!-- 1 TRANSLASI -->
-                    <div class="carousel-item active">
-                        <img src="assets/images/longsorantranslasi.png" 
-                             class="d-block w-100 carousel-img" alt="Longsoran Translasi">
-                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-                            <h5 class="fw-semibold">Longsoran Translasi</h5>
-                            <p>Longsoran yang bergerak sepanjang bidang gelincir berbentuk rata atau menggelombang landai</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item"> <!-- 2 ROTASI -->
-                        <img src="assets/images/longsoranrotasi.png" 
-                             class="d-block w-100 carousel-img" alt="Longsoran Rotasi">
-                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-                            <h5 class="fw-semibold">Longsoran Rotasi</h5>
-                            <p>Longsoran yang bergerak sepanjang bidang gelincir berbentuk cekung</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item"> <!-- 3 PEGERAKAN BLOK -->
-                        <img src="assets/images/pergerakanblok.png" 
-                             class="d-block w-100 carousel-img" alt="Pergerakan Blok">
-                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-                            <h5 class="fw-semibold">Pergerakan Blok</h5>
-                            <p>Pergerakan batuan yang bergerak pada bidang gelincir berbentuk rata</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item"> <!-- 4 RAYAPAN TANAH -->
-                        <img src="assets/images/rayapantanah.png" 
-                             class="d-block w-100 carousel-img" alt="Rayapan Tanah">
-                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-                            <h5 class="fw-semibold">Rayapan Tanah</h5>
-                            <p>Pergerakan tanah yang sangat lambat pada lereng landai</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item"> <!-- 5 RUNTUHAN BATU -->
-                        <img src="assets/images/runtuhanbatu.png" 
-                             class="d-block w-100 carousel-img" alt="Runtuhan Batu">
-                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-                            <h5 class="fw-semibold">Runtuhan Batu</h5>
-                            <p>Pergerakan tanah yang sangat lambat pada lereng landai</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item"> <!-- 6 ALIRAN BAHAN ROMBAKAN -->
-                        <img src="assets/images/aliranbahanrombakan.png" 
-                             class="d-block w-100 carousel-img" alt="Aliran Bahan Rombakan">
-                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-                            <h5 class="fw-semibold">Aliran Bahan Rombakan</h5>
-                            <p>Pergerakan tanah yang sangat lambat pada lereng landai</p>
+            <div class="row g-4"> 
+                
+                <div class="col-md-4 col-sm-6">
+                    <div class="card jenis-card h-100">
+                        <img src="assets/images/translasi.png" class="card-img-top jenis-card-img" alt="Longsoran Translasi">
+                        <div class="card-body">
+                            <h5 class="card-title">Longsoran Translasi</h5>
+                            <p class="card-text small">Longsoran yang bergerak sepanjang bidang gelincir berbentuk rata atau menggelombang landai.</p>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#jenisCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#jenisCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card jenis-card h-100">
+                        <img src="assets/images/rotasi.png" class="card-img-top jenis-card-img" alt="Longsoran Rotasi">
+                        <div class="card-body">
+                            <h5 class="card-title">Longsoran Rotasi</h5>
+                            <p class="card-text small">Longsoran yang bergerak sepanjang bidang gelincir berbentuk cekung.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card jenis-card h-100">
+                        <img src="assets/images/blokmove.png" class="card-img-top jenis-card-img" alt="Pergerakan Blok">
+                        <div class="card-body">
+                            <h5 class="card-title">Pergerakan Blok</h5>
+                            <p class="card-text small">Pergerakan batuan yang bergerak pada bidang gelincir berbentuk rata.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card jenis-card h-100">
+                        <img src="assets/images/rayapan.png" class="card-img-top jenis-card-img" alt="Rayapan Tanah">
+                        <div class="card-body">
+                            <h5 class="card-title">Rayapan Tanah</h5>
+                            <p class="card-text small">Pergerakan tanah yang sangat lambat pada lereng landai.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card jenis-card h-100">
+                        <img src="assets/images/runtuhan.png" class="card-img-top jenis-card-img" alt="Runtuhan Batu">
+                        <div class="card-body">
+                            <h5 class="card-title">Runtuhan Batu</h5>
+                            <p class="card-text small">Pergerakan batuan yang jatuh bebas dari tebing curam.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card jenis-card h-100">
+                        <img src="assets/images/rombakan.png" class="card-img-top jenis-card-img" alt="Aliran Bahan Rombakan">
+                        <div class="card-body">
+                            <h5 class="card-title">Aliran Bahan Rombakan</h5>
+                            <p class="card-text small">Pergerakan massa tanah dan batuan yang didominasi oleh air dan bergerak cepat.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
         </section>
 
-        <!-- Penyebab -->
         <section id="penyebab" class="mb-5">
             <h2 class="section-title">Penyebab Tanah Longsor</h2>
             <div class="row">
@@ -240,7 +313,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-header bg-warning text-dark fw-semibold">
+                        <div class="card-header bg-warning text-white fw-semibold">
                             <i class="fas fa-users me-2"></i>Faktor Manusia
                         </div>
                         <div class="card-body">
@@ -266,7 +339,6 @@
             </div>
         </section>
 
-        <!-- Mitigasi -->
         <section id="mitigasi" class="mb-5">
             <h2 class="section-title">Mitigasi Tanah Longsor</h2>
             <div class="row g-4">
@@ -328,7 +400,6 @@
             </div>
         </section>
 
-        <!-- Penanggulangan Sebelum -->
         <section id="penanggulangan-sebelum" class="mb-5">
             <h2 class="section-title">Penanggulangan Sebelum Terjadi Bencana</h2>
             <div class="timeline">
@@ -347,7 +418,6 @@
             </div>
         </section>
 
-        <!-- Penanggulangan Saat -->
         <section id="penanggulangan-saat" class="mb-5">
             <h2 class="section-title">Penanggulangan Saat Terjadi Bencana</h2>
             <div class="row g-4">
@@ -378,7 +448,6 @@
             </div>
         </section>
 
-        <!-- Penanggulangan Setelah -->
         <section id="penanggulangan-setelah" class="mb-5">
             <h2 class="section-title">Penanggulangan Setelah Terjadi Bencana</h2>
             <div class="row g-4">
@@ -412,7 +481,6 @@
             </div>
         </section>
 
-        <!-- Keuntungan -->
         <section id="keuntungan" class="mb-5">
             <h2 class="section-title">Keuntungan Mitigasi Tanah Longsor</h2>
             <div class="card border-0 bg-light">
@@ -452,7 +520,6 @@
             </div>
         </section>
 
-        <!-- Kerugian -->
         <section id="kerugian" class="mb-5">
             <h2 class="section-title">Kerugian Akibat Tanah Longsor</h2>
             <div class="card border-0 bg-light">
@@ -501,15 +568,7 @@
             </div>
         </section>
     </div>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <p class="mb-0">&copy; 2024 WELI - Website Edukasi Tanah Longsor Indonesia. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Bootstrap & JavaScript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

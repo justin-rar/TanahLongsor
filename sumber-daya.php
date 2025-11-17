@@ -4,53 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sumber Daya - WELI</title>
-    
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Custom CSS -->
     <style>
+        /* Palet Warna*/
+        :root {
+            --primary-color: #795548;
+            --secondary-color: #D84315;
+            --dark-color: #5D4037;
+            --light-bg-color: #F5F5F5;
+        }
+
         * {
             font-family: 'Poppins', sans-serif;
+            color: var(--dark-color);
         }
+    
         .navbar-brand {
             font-weight: 700;
-            color: #2c3e50 !important;
+            color: var(--dark-color) !important;
             font-size: 1.5rem;
         }
+        
         .nav-link {
             font-weight: 500;
+            color: var(--dark-color) !important;
+            position: relative;
+            padding-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease-in-out;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--secondary-color) !important;
         }
         .section-title {
-            border-left: 5px solid #3498db;
+            border-left: 5px solid var(--secondary-color); /* Aksen Oranye */
             padding-left: 15px;
             margin: 40px 0 20px 0;
             font-weight: 600;
         }
+        
         .resource-card {
             border: none;
-            border-left: 4px solid #3498db;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--primary-color); /* Aksen Cokelat */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            border-radius: 8px;
         }
         .resource-card:hover {
             transform: translateX(5px);
         }
+        
+        .resource-card .card-title.text-primary {
+            color: var(--dark-color) !important; 
+        }
+
         .download-btn {
-            background: linear-gradient(135deg, #3498db, #2c3e50);
+            background-color: var(--secondary-color); 
             border: none;
             font-weight: 500;
+            transition: background-color 0.3s ease;
         }
+        
         .download-btn:hover {
-            background: linear-gradient(135deg, #2980b9, #34495e);
+            background-color: var(--secondary-hover-color); 
         }
+       
+        .list-group-item-action {
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .list-group-item-action:hover {
+            color: var(--dark-color);
+            background-color: var(--light-bg-color);
+            border-left-color: var(--secondary-color);
+        }
+        .list-group-item-action:hover .fa-external-link-alt {
+            color: var(--secondary-color) !important;
+        }
+        
+        .download-btn a {
+            color: white !important;
+        }
+        
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="index.php">WELI</a>
@@ -72,7 +130,7 @@
                         <a class="nav-link" href="galeri.php">Galeri</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="sumber-daya.php">Sumber Daya</a>
+                        <a class="nav-link active" aria-current="page" href="sumber-daya.php">Sumber Daya</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="kontak.php">Kontak</a>
@@ -84,11 +142,9 @@
 
     <div class="container mt-5 pt-5">
         <h1 class="section-title border-0 p-0 mt-4">Sumber Daya & Download</h1>
-        <p class="lead mb-5">Kumpulan materi edukasi, pedoman, dan dokumen penting terkait tanah longsor</p>
+        <p class="lead mb-5 text-muted">Kumpulan materi edukasi, pedoman, dan dokumen penting terkait tanah longsor</p>
 
-        <!-- Download Resources -->
         <div class="row g-4">
-            <!-- Sumber Daya 1 -->
             <div class="col-12">
                 <div class="card resource-card">
                     <div class="card-body">
@@ -107,7 +163,6 @@
                 </div>
             </div>
 
-            <!-- Sumber Daya 2 -->
             <div class="col-12">
                 <div class="card resource-card">
                     <div class="card-body">
@@ -126,7 +181,6 @@
                 </div>
             </div>
 
-            <!-- Sumber Daya 3 -->
             <div class="col-12">
                 <div class="card resource-card">
                     <div class="card-body">
@@ -145,7 +199,6 @@
                 </div>
             </div>
 
-        <!-- Additional Resources -->
         <h2 class="section-title mt-5">Tautan Penting</h2>
         <div class="row mt-3">
             <div class="col-md-6">
@@ -183,16 +236,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <p class="mb-0">&copy; 2024 WELI - Website Edukasi Tanah Longsor Indonesia. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
-    <!-- Bootstrap & JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

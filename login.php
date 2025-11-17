@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $stmt->get_result()->fetch_assoc();
 
     // Cek username & password (tanpa hash)
+    // PERINGATAN: Dalam produksi, password harus di-hash menggunakan password_verify()
     if ($result && $password === $result['password']) {
         $_SESSION['username'] = $username;
         header("Location: dashboard.php");
@@ -36,11 +37,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
+/* Palet Warna (Tema Tanah Longsor): Konsisten */
+:root {
+    --primary-color: #795548; /* Cokelat Sedang/Lumpur */
+    --secondary-color: #D84315; /* Oranye Gelap/Aksen Bahaya (Base untuk gradasi) */
+    --secondary-hover-color: #F4511E; /* Oranye Lebih Terang (Akhir gradasi tombol) */
+    --dark-color: #5D4037; /* Cokelat Tua/Tanah (Base untuk gradasi background) */
+    --light-bg-color: #F5F5F5;
+
+    /* Gradasi Background yang lebih kontras */
+    --gradient-bg-start: #4A2C21; /* Cokelat Lebih Gelap dari dark-color untuk start */
+    --gradient-bg-end: #8D6E63; /* Cokelat Lebih Terang dari primary-color untuk end */
+    --gradient-body: linear-gradient(135deg, var(--gradient-bg-start) 0%, var(--gradient-bg-end) 100%);
+    
+    /* Gradasi Tombol yang lebih kontras */
+    --gradient-btn-start: #D84315; /* Oranye Gelap */
+    --gradient-btn-end: #F4511E; /* Oranye Lebih Terang */
+    --gradient-button: linear-gradient(135deg, var(--gradient-btn-start) 0%, var(--gradient-btn-end) 100%);
+}
+
 * {
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    /* Menerapkan gradasi ke background body */
+    background: var(--gradient-body); /* Menggunakan gradasi yang lebih kontras */
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -48,11 +69,12 @@ body {
 .login-container {
     background: white;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3); 
     overflow: hidden;
 }
 .login-left {
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    /* Menerapkan gradasi ke sisi kiri */
+    background: var(--gradient-body); /* Menggunakan gradasi yang lebih kontras */
     color: white;
     padding: 40px;
     display: flex;
@@ -69,28 +91,36 @@ body {
 .brand i {
     font-size: 3rem;
     margin-bottom: 15px;
-    color: #3498db;
+    color: var(--secondary-color); /* Tetap Oranye Gelap */
 }
 .brand h1 {
     font-weight: 700;
-    color: #2c3e50;
+    color: var(--dark-color);
     margin-bottom: 5px;
 }
 .brand p {
-    color: #6c757d;
+    color: #9E9E9E; 
 }
 .form-control {
     border-radius: 8px;
     padding: 12px 15px;
     border: 1px solid #e1e5e9;
     transition: all 0.3s ease;
+    color: var(--dark-color);
 }
 .form-control:focus {
-    border-color: #3498db;
-    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(216, 67, 21, 0.25);
 }
+
+.input-group-text {
+    background-color: var(--light-bg-color) !important;
+    border-color: #e1e5e9 !important;
+}
+
 .btn-login {
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    /* Menerapkan gradasi ke tombol login */
+    background: var(--gradient-button); /* Menggunakan gradasi tombol yang lebih kontras */
     border: none;
     border-radius: 8px;
     padding: 12px;
@@ -99,11 +129,14 @@ body {
 }
 .btn-login:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 5px 15px rgba(216, 67, 21, 0.4); 
+    /* Untuk hover, bisa juga sedikit menggelapkan atau memperterang gradasi */
+    filter: brightness(1.1); /* Memberi efek sedikit lebih cerah saat hover */
 }
 .feature-list {
     list-style: none;
     padding: 0;
+    color: white; 
 }
 .feature-list li {
     margin-bottom: 15px;
@@ -119,7 +152,21 @@ body {
     align-items: center;
     justify-content: center;
     margin-right: 10px;
+    color: white;
 }
+/* Memastikan ikon gunung di sisi kiri juga putih */
+.login-left .fa-mountain {
+    color: white !important;
+}
+
+/* Penyesuaian teks kecil info */
+.text-muted.small {
+    color: #9E9E9E !important;
+}
+.text-muted.small .fa-info-circle {
+    color: var(--primary-color) !important;
+}
+
 </style>
 </head>
 <body>

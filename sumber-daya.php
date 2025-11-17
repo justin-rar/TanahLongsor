@@ -13,6 +13,7 @@
         :root {
             --primary-color: #795548;
             --secondary-color: #D84315;
+            --secondary-hover-color: #F4511E;
             --dark-color: #5D4037;
             --light-bg-color: #F5F5F5;
         }
@@ -57,7 +58,7 @@
             color: var(--secondary-color) !important;
         }
         .section-title {
-            border-left: 5px solid var(--secondary-color); /* Aksen Oranye */
+            border-left: 5px solid var(--secondary-color); 
             padding-left: 15px;
             margin: 40px 0 20px 0;
             font-weight: 600;
@@ -65,7 +66,7 @@
         
         .resource-card {
             border: none;
-            border-left: 4px solid var(--primary-color); /* Aksen Cokelat */
+            border-left: 4px solid var(--primary-color); 
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
             border-radius: 8px;
@@ -155,7 +156,7 @@
                             </div>
                             <div class="col-md-4 text-end">
                                 <button class="btn download-btn text-white px-4 py-2">
-                                    <i class="fas fa-download me-2"></i><a href="https://bpbd.jogjaprov.go.id/berita/mitigasi-bencana-tanah-longsor-1" style="color: inherit; text-decoration: none;" target="_blank">Kunjungi</a>
+                                    <i class="fas fa-external-link-alt me-2"></i><a href="https://bpbd.jogjaprov.go.id/berita/mitigasi-bencana-tanah-longsor-1" style="color: inherit; text-decoration: none;" target="_blank">Kunjungi</a>
                                 </button>
                             </div>
                         </div>
@@ -173,7 +174,7 @@
                             </div>
                             <div class="col-md-4 text-end">
                                 <button class="btn download-btn text-white px-4 py-2">
-                                    <i class="fas fa-download me-2"></i><a href="https://inarisk.bnpb.go.id" style="color: inherit; text-decoration: none;" target="_blank">Kunjungi</a>
+                                    <i class="fas fa-external-link-alt me-2"></i><a href="https://inarisk.bnpb.go.id" style="color: inherit; text-decoration: none;" target="_blank">Kunjungi</a>
                                 </button>
                             </div>
                         </div>

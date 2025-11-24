@@ -55,11 +55,8 @@
         .nav-link.active {
             color: var(--secondary-color) !important;
         }
-        /* ----------------------------------- */
-
-        /* Judul Section (Menggunakan warna aksen) */
+        
         .section-title {
-            /* Warna aksen diubah dari #3498db ke Oranye (--secondary-color) */
             border-left: 5px solid var(--secondary-color); 
             padding-left: 15px;
             margin: 40px 0 20px 0;
@@ -67,7 +64,7 @@
             color: var(--dark-color);
         }
         
-        /* Gambar Galeri */
+        
         .gallery-img {
             height: 250px;
             object-fit: cover;
@@ -77,20 +74,17 @@
             transform: scale(1.05);
         }
         
-        /* Card Galeri */
         .card {
             border: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Shadow lebih menonjol */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
             overflow: hidden;
             border-radius: 8px;
         }
 
-        /* Card untuk Video agar terlihat seragam */
         .card.video-card .card-body {
             padding: 0;
         }
 
-        /* Tautan Sumber di Card */
         .card-body a {
             color: var(--primary-color);
             font-weight: 500;
@@ -165,12 +159,12 @@
 
             <div class="col-md-4">
                 <div class="card h-100">
-                    <img src="https://surabaya.basarnas.go.id/storage/uploads/posts/6831ad6d7ceb9.jpg" 
+                    <img src="https://asset.kompas.com/crops/ROq916qBJHmAIOGGG69jXmnjBGQ=/0x0:0x0/1200x800/data/photo/2025/11/21/69205976474eb.jpg" 
                         class="card-img-top gallery-img" alt="Tanah Longsor 3">
                     <div class="card-body">
                         <h5 class="card-title fw-semibold" style="color: var(--dark-color);">Proses Evakuasi</h5>
                         <p class="card-text">Tim SAR melakukan evakuasi korban terdampak tanah longsor.</p>
-                        <div class="text-muted small">Sumber: <a href="https://surabaya.basarnas.go.id/berita/tim-sar-gabungan-berhasil-menemukan-seluruh-korban-tanah-longsor-di-trenggalek" target="_blank" rel="noopener noreferrer">surabaya.basarnas.go.id</a></div>
+                        <div class="text-muted small">Sumber: <a href="https://regional.kompas.com/read/2025/11/21/194530978/evakuasi-longsor-banjarnegara-dilakukan-dengan-pengamanan-ketat-18-korban" target="_blank" rel="noopener noreferrer">kompas.com</a></div>
                     </div>
                 </div>
             </div>

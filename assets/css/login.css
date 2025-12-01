@@ -1,0 +1,123 @@
+/* Palet Warna */
+:root {
+    --primary-color: #795548;
+    --secondary-color: #D84315;
+    --secondary-hover-color: #F4511E;
+    --dark-color: #5D4037;
+    --light-bg-color: #F5F5F5;
+
+    --gradient-bg-start: #4A2C21;
+    --gradient-bg-end: #8D6E63; 
+    --gradient-body: linear-gradient(135deg, var(--gradient-bg-start) 0%, var(--gradient-bg-end) 100%);
+    
+    --gradient-btn-start: #D84315; 
+    --gradient-btn-end: #F4511E; 
+    --gradient-button: linear-gradient(135deg, var(--gradient-btn-start) 0%, var(--gradient-btn-end) 100%);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+body {
+
+    background: var(--gradient-body); 
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.login-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3); 
+    overflow: hidden;
+}
+.login-left {
+    background: var(--gradient-body); 
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-right {
+    padding: 40px;
+}
+.brand {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.brand i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color); 
+}
+.brand h1 {
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 5px;
+}
+.brand p {
+    color: #9E9E9E; 
+}
+.form-control {
+    border-radius: 8px;
+    padding: 12px 15px;
+    border: 1px solid #e1e5e9;
+    transition: all 0.3s ease;
+    color: var(--dark-color);
+}
+.form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(216, 67, 21, 0.25);
+}
+
+.input-group-text {
+    background-color: var(--light-bg-color) !important;
+    border-color: #e1e5e9 !important;
+}
+
+.btn-login {
+    background: var(--gradient-button);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(216, 67, 21, 0.4); 
+    filter: brightness(1.1);
+}
+.feature-list {
+    list-style: none;
+    padding: 0;
+    color: white; 
+}
+.feature-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.feature-list i {
+    background: rgba(255,255,255,0.2);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    color: white;
+}
+
+.login-left .fa-mountain {
+    color: white !important;
+}
+
+.text-muted.small {
+    color: #9E9E9E !important;
+}
+.text-muted.small .fa-info-circle {
+    color: var(--primary-color) !important;
+}

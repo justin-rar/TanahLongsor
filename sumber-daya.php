@@ -7,107 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        /* Palet Warna*/
-        :root {
-            --primary-color: #795548;
-            --secondary-color: #D84315;
-            --secondary-hover-color: #F4511E;
-            --dark-color: #5D4037;
-            --light-bg-color: #F5F5F5;
-        }
-
-        * {
-            font-family: 'Poppins', sans-serif;
-            color: var(--dark-color);
-        }
-    
-        .navbar-brand {
-            font-weight: 700;
-            color: var(--dark-color) !important;
-            font-size: 1.5rem;
-        }
-        
-        .nav-link {
-            font-weight: 500;
-            color: var(--dark-color) !important;
-            position: relative;
-            padding-bottom: 5px;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: var(--secondary-color);
-            transition: width 0.3s ease-in-out;
-        }
-
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: 100%;
-        }
-
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--secondary-color) !important;
-        }
-        .section-title {
-            border-left: 5px solid var(--secondary-color); 
-            padding-left: 15px;
-            margin: 40px 0 20px 0;
-            font-weight: 600;
-        }
-        
-        .resource-card {
-            border: none;
-            border-left: 4px solid var(--primary-color); 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            border-radius: 8px;
-        }
-        .resource-card:hover {
-            transform: translateX(5px);
-        }
-        
-        .resource-card .card-title.text-primary {
-            color: var(--dark-color) !important; 
-        }
-
-        .download-btn {
-            background-color: var(--secondary-color); 
-            border: none;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-        }
-        
-        .download-btn:hover {
-            background-color: var(--secondary-hover-color); 
-        }
-       
-        .list-group-item-action {
-            border-left: 3px solid transparent;
-            transition: all 0.3s ease;
-        }
-        .list-group-item-action:hover {
-            color: var(--dark-color);
-            background-color: var(--light-bg-color);
-            border-left-color: var(--secondary-color);
-        }
-        .list-group-item-action:hover .fa-external-link-alt {
-            color: var(--secondary-color) !important;
-        }
-        
-        .download-btn a {
-            color: white !important;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="assets/css/sumber-daya.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
@@ -236,7 +136,7 @@
             </div>
         </div>
     </div>
-
+<br>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
